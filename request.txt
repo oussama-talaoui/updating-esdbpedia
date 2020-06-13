@@ -1,0 +1,474 @@
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX dataid-cv: <http://dataid.dbpedia.org/ns/cv#>
+PREFIX dataid: <http://dataid.dbpedia.org/ns/core#>
+SELECT DISTINCT ?file WHERE
+{ 
+	{
+		# Get all files
+		SELECT DISTINCT ?file WHERE {
+		 	?dataset dataid:artifact <https://databus.dbpedia.org/dbpedia/generic/categories> .
+			?dataset dcat:distribution ?distribution .
+			{ 
+				?distribution <http://dataid.dbpedia.org/ns/core#compression> 'bzip2'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			{ 
+				?distribution <http://dataid.dbpedia.org/ns/core#formatExtension> 'ttl'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			{ 
+				?distribution <http://purl.org/dc/terms/hasVersion> '2019.08.30'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			{ 
+				?distribution <http://dataid.dbpedia.org/ns/cv#lang> 'es'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			?distribution dcat:downloadURL ?file .
+		}
+	}
+	UNION
+	{
+		# Get all files
+		SELECT DISTINCT ?file WHERE {
+		 	?dataset dataid:artifact <https://databus.dbpedia.org/dbpedia/generic/commons-sameas-links> .
+			?dataset dcat:distribution ?distribution .
+			{ 
+				?distribution <http://dataid.dbpedia.org/ns/core#compression> 'bzip2'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			{ 
+				?distribution <http://dataid.dbpedia.org/ns/core#formatExtension> 'ttl'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			{ 
+				?distribution <http://purl.org/dc/terms/hasVersion> '2019.08.30'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			{ 
+				?distribution <http://dataid.dbpedia.org/ns/cv#lang> 'es'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			?distribution dcat:downloadURL ?file .
+		}
+	}
+	UNION
+	{
+		# Get all files
+		SELECT DISTINCT ?file WHERE {
+		 	?dataset dataid:artifact <https://databus.dbpedia.org/dbpedia/generic/disambiguations> .
+			?dataset dcat:distribution ?distribution .
+			{ 
+				?distribution <http://dataid.dbpedia.org/ns/core#compression> 'bzip2'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			{ 
+				?distribution <http://dataid.dbpedia.org/ns/core#formatExtension> 'ttl'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			{ 
+				?distribution <http://purl.org/dc/terms/hasVersion> '2019.08.30'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			{ 
+				?distribution <http://dataid.dbpedia.org/ns/cv#lang> 'es'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			?distribution dcat:downloadURL ?file .
+		}
+	}
+	UNION
+	{
+		# Get all files
+		SELECT DISTINCT ?file WHERE {
+		 	?dataset dataid:artifact <https://databus.dbpedia.org/dbpedia/generic/external-links> .
+			?dataset dcat:distribution ?distribution .
+			{ 
+				?distribution <http://dataid.dbpedia.org/ns/core#compression> 'bzip2'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			{ 
+				?distribution <http://dataid.dbpedia.org/ns/core#formatExtension> 'ttl'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			{ 
+				?distribution <http://purl.org/dc/terms/hasVersion> '2019.08.30'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			{ 
+				?distribution <http://dataid.dbpedia.org/ns/cv#lang> 'es'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			?distribution dcat:downloadURL ?file .
+		}
+	}
+	UNION
+	{
+		# Get all files
+		SELECT DISTINCT ?file WHERE {
+		 	?dataset dataid:artifact <https://databus.dbpedia.org/dbpedia/generic/geo-coordinates> .
+			?dataset dcat:distribution ?distribution .
+			{ 
+				?distribution <http://dataid.dbpedia.org/ns/core#compression> 'bzip2'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			{ 
+				?distribution <http://dataid.dbpedia.org/ns/core#formatExtension> 'ttl'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			{ 
+				?distribution <http://purl.org/dc/terms/hasVersion> '2019.08.30'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			{ 
+				?distribution <http://dataid.dbpedia.org/ns/cv#lang> 'es'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			?distribution dcat:downloadURL ?file .
+		}
+	}
+	UNION
+	{
+		# Get all files
+		SELECT DISTINCT ?file WHERE {
+		 	?dataset dataid:artifact <https://databus.dbpedia.org/dbpedia/generic/homepages> .
+			?dataset dcat:distribution ?distribution .
+			{ 
+				?distribution <http://dataid.dbpedia.org/ns/core#compression> 'bzip2'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			{ 
+				?distribution <http://dataid.dbpedia.org/ns/core#formatExtension> 'ttl'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			{ 
+				?distribution <http://purl.org/dc/terms/hasVersion> '2019.08.30'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			{ 
+				?distribution <http://dataid.dbpedia.org/ns/cv#lang> 'es'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			?distribution dcat:downloadURL ?file .
+		}
+	}
+	UNION
+	{
+		# Get all files
+		SELECT DISTINCT ?file WHERE {
+		 	?dataset dataid:artifact <https://databus.dbpedia.org/dbpedia/generic/infobox-properties> .
+			?dataset dcat:distribution ?distribution .
+			{ 
+				?distribution <http://dataid.dbpedia.org/ns/core#compression> 'bzip2'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			{ 
+				?distribution <http://dataid.dbpedia.org/ns/core#formatExtension> 'ttl'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			{ 
+				?distribution <http://purl.org/dc/terms/hasVersion> '2019.08.30'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			{ 
+				?distribution <http://dataid.dbpedia.org/ns/cv#lang> 'es'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			?distribution dcat:downloadURL ?file .
+		}
+	}
+	UNION
+	{
+		# Get all files
+		SELECT DISTINCT ?file WHERE {
+		 	?dataset dataid:artifact <https://databus.dbpedia.org/dbpedia/generic/infobox-property-definitions> .
+			?dataset dcat:distribution ?distribution .
+			{ 
+				?distribution <http://dataid.dbpedia.org/ns/core#compression> 'bzip2'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			{ 
+				?distribution <http://dataid.dbpedia.org/ns/core#formatExtension> 'ttl'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			{ 
+				?distribution <http://purl.org/dc/terms/hasVersion> '2019.08.30'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			{ 
+				?distribution <http://dataid.dbpedia.org/ns/cv#lang> 'es'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			?distribution dcat:downloadURL ?file .
+		}
+	}
+	UNION
+	{
+		# Get all files
+		SELECT DISTINCT ?file WHERE {
+		 	?dataset dataid:artifact <https://databus.dbpedia.org/dbpedia/generic/interlanguage-links> .
+			?dataset dcat:distribution ?distribution .
+			{ 
+				?distribution <http://dataid.dbpedia.org/ns/core#compression> 'bzip2'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			{ 
+				?distribution <http://dataid.dbpedia.org/ns/core#formatExtension> 'ttl'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			{ 
+				?distribution <http://purl.org/dc/terms/hasVersion> '2019.08.30'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			{ 
+				?distribution <http://dataid.dbpedia.org/ns/cv#lang> 'es'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			?distribution dcat:downloadURL ?file .
+		}
+	}
+	UNION
+	{
+		# Get all files
+		SELECT DISTINCT ?file WHERE {
+		 	?dataset dataid:artifact <https://databus.dbpedia.org/dbpedia/generic/labels> .
+			?dataset dcat:distribution ?distribution .
+			{ 
+				?distribution <http://dataid.dbpedia.org/ns/core#compression> 'bzip2'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			{ 
+				?distribution <http://dataid.dbpedia.org/ns/core#formatExtension> 'ttl'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			{ 
+				?distribution <http://purl.org/dc/terms/hasVersion> '2019.08.30'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			{ 
+				?distribution <http://dataid.dbpedia.org/ns/cv#lang> 'es'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			?distribution dcat:downloadURL ?file .
+		}
+	}
+	UNION
+	{
+		# Get all files
+		SELECT DISTINCT ?file WHERE {
+		 	?dataset dataid:artifact <https://databus.dbpedia.org/dbpedia/generic/page> .
+			?dataset dcat:distribution ?distribution .
+			{ 
+				?distribution <http://dataid.dbpedia.org/ns/core#compression> 'bzip2'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			{ 
+				?distribution <http://dataid.dbpedia.org/ns/core#formatExtension> 'ttl'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			{ 
+				?distribution <http://purl.org/dc/terms/hasVersion> '2019.08.30'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			{ 
+				?distribution <http://dataid.dbpedia.org/ns/cv#lang> 'es'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			?distribution dcat:downloadURL ?file .
+		}
+	}
+	UNION
+	{
+		# Get all files
+		SELECT DISTINCT ?file WHERE {
+		 	?dataset dataid:artifact <https://databus.dbpedia.org/dbpedia/generic/persondata> .
+			?dataset dcat:distribution ?distribution .
+			{ 
+				?distribution <http://dataid.dbpedia.org/ns/core#compression> 'bzip2'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			{ 
+				?distribution <http://dataid.dbpedia.org/ns/core#formatExtension> 'ttl'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			{ 
+				?distribution <http://purl.org/dc/terms/hasVersion> '2019.08.30'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			{ 
+				?distribution <http://dataid.dbpedia.org/ns/cv#lang> 'es'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			?distribution dcat:downloadURL ?file .
+		}
+	}
+	UNION
+	{
+		# Get all files
+		SELECT DISTINCT ?file WHERE {
+		 	?dataset dataid:artifact <https://databus.dbpedia.org/dbpedia/generic/redirects> .
+			?dataset dcat:distribution ?distribution .
+			{ 
+				?distribution <http://dataid.dbpedia.org/ns/core#compression> 'bzip2'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			{ 
+				?distribution <http://dataid.dbpedia.org/ns/core#formatExtension> 'ttl'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			{ 
+				?distribution <http://purl.org/dc/terms/hasVersion> '2019.08.30'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			{ 
+				?distribution <http://dataid.dbpedia.org/ns/cv#lang> 'es'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			?distribution dcat:downloadURL ?file .
+		}
+	}
+	UNION
+	{
+		# Get all files
+		SELECT DISTINCT ?file WHERE {
+		 	?dataset dataid:artifact <https://databus.dbpedia.org/dbpedia/generic/revisions> .
+			?dataset dcat:distribution ?distribution .
+			{ 
+				?distribution <http://dataid.dbpedia.org/ns/core#compression> 'bzip2'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			{ 
+				?distribution <http://dataid.dbpedia.org/ns/core#formatExtension> 'ttl'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			{ 
+				?distribution <http://purl.org/dc/terms/hasVersion> '2019.08.30'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			{ 
+				?distribution <http://dataid.dbpedia.org/ns/cv#lang> 'es'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			?distribution dcat:downloadURL ?file .
+		}
+	}
+	UNION
+	{
+		# Get all files
+		SELECT DISTINCT ?file WHERE {
+		 	?dataset dataid:artifact <https://databus.dbpedia.org/dbpedia/generic/wikilinks> .
+			?dataset dcat:distribution ?distribution .
+			{ 
+				?distribution <http://dataid.dbpedia.org/ns/core#compression> 'bzip2'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			{ 
+				?distribution <http://dataid.dbpedia.org/ns/core#formatExtension> 'ttl'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			{ 
+				?distribution <http://purl.org/dc/terms/hasVersion> '2019.08.30'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			{ 
+				?distribution <http://dataid.dbpedia.org/ns/cv#lang> 'es'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			?distribution dcat:downloadURL ?file .
+		}
+	}
+	UNION
+	{
+		# Get all files
+		SELECT DISTINCT ?file WHERE {
+		 	?dataset dataid:artifact <https://databus.dbpedia.org/dbpedia/generic/wikipedia-links> .
+			?dataset dcat:distribution ?distribution .
+			{ 
+				?distribution <http://dataid.dbpedia.org/ns/core#compression> 'bzip2'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			{ 
+				?distribution <http://dataid.dbpedia.org/ns/core#formatExtension> 'ttl'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			{ 
+				?distribution <http://purl.org/dc/terms/hasVersion> '2019.08.30'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			{ 
+				?distribution <http://dataid.dbpedia.org/ns/cv#lang> 'es'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			?distribution dcat:downloadURL ?file .
+		}
+	}
+	UNION
+	{
+		# Get all files
+		SELECT DISTINCT ?file WHERE {
+		 	?dataset dataid:artifact <https://databus.dbpedia.org/dbpedia/mappings/geo-coordinates-mappingbased> .
+			?dataset dcat:distribution ?distribution .
+			{ 
+				?distribution <http://purl.org/dc/terms/hasVersion> '2019.08.30'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			{ 
+				?distribution <http://dataid.dbpedia.org/ns/core#compression> 'bzip2'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			{ 
+				?distribution <http://dataid.dbpedia.org/ns/cv#lang> 'es'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			{ 
+				?distribution <http://dataid.dbpedia.org/ns/core#formatExtension> 'txt'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			?distribution dcat:downloadURL ?file .
+		}
+	}
+	UNION
+	{
+		# Get all files
+		SELECT DISTINCT ?file WHERE {
+		 	?dataset dataid:artifact <https://databus.dbpedia.org/dbpedia/mappings/instance-types> .
+			?dataset dcat:distribution ?distribution .
+			{ 
+				?distribution <http://purl.org/dc/terms/hasVersion> '2019.08.30'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			{ 
+				?distribution <http://dataid.dbpedia.org/ns/core#compression> 'bzip2'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			{ 
+				?distribution <http://dataid.dbpedia.org/ns/cv#lang> 'es'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			?distribution dcat:downloadURL ?file .
+		}
+	}
+	UNION
+	{
+		# Get all files
+		SELECT DISTINCT ?file WHERE {
+		 	?dataset dataid:artifact <https://databus.dbpedia.org/dbpedia/mappings/mappingbased-literals> .
+			?dataset dcat:distribution ?distribution .
+			{ 
+				?distribution <http://purl.org/dc/terms/hasVersion> '2019.08.30'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			{ 
+				?distribution <http://dataid.dbpedia.org/ns/core#compression> 'bzip2'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			{ 
+				?distribution <http://dataid.dbpedia.org/ns/cv#lang> 'es'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			?distribution dcat:downloadURL ?file .
+		}
+	}
+	UNION
+	{
+		# Get all files
+		SELECT DISTINCT ?file WHERE {
+		 	?dataset dataid:artifact <https://databus.dbpedia.org/dbpedia/mappings/mappingbased-objects> .
+			?dataset dcat:distribution ?distribution .
+			{ 
+				?distribution <http://purl.org/dc/terms/hasVersion> '2019.08.30'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			{ 
+				?distribution <http://dataid.dbpedia.org/ns/core#compression> 'bzip2'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			{ 
+				?distribution <http://dataid.dbpedia.org/ns/cv#lang> 'es'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			?distribution dcat:downloadURL ?file .
+		}
+	}
+	UNION
+	{
+		# Get all files
+		SELECT DISTINCT ?file WHERE {
+		 	?dataset dataid:artifact <https://databus.dbpedia.org/dbpedia/mappings/specific-mappingbased-properties> .
+			?dataset dcat:distribution ?distribution .
+			{ 
+				?distribution <http://purl.org/dc/terms/hasVersion> '2019.08.30'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			{ 
+				?distribution <http://dataid.dbpedia.org/ns/core#compression> 'bzip2'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			{ 
+				?distribution <http://dataid.dbpedia.org/ns/cv#lang> 'es'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			?distribution dcat:downloadURL ?file .
+		}
+	}
+	UNION
+	{
+		# Get all files
+		SELECT DISTINCT ?file WHERE {
+		 	?dataset dataid:artifact <https://databus.dbpedia.org/dbpedia/transition/freebase-links> .
+			?dataset dcat:distribution ?distribution .
+			{ 
+				?distribution <http://purl.org/dc/terms/hasVersion> '2019.02.10'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			{ 
+				?distribution <http://dataid.dbpedia.org/ns/cv#lang> 'es'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			?distribution dcat:downloadURL ?file .
+		}
+	}
+	UNION
+	{
+		# Get all files
+		SELECT DISTINCT ?file WHERE {
+		 	?dataset dataid:artifact <https://databus.dbpedia.org/dbpedia/transition/links> .
+			?dataset dcat:distribution ?distribution .
+			{ 
+				?distribution <http://purl.org/dc/terms/hasVersion> '2019.02.01'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			{ 
+				?distribution <http://dataid.dbpedia.org/ns/cv#lang> 'es'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			?distribution dcat:downloadURL ?file .
+		}
+	}
+	UNION
+	{
+		# Get all files
+		SELECT DISTINCT ?file WHERE {
+		  ?dataset dataid:artifact <https://databus.dbpedia.org/dbpedia/publication/strategy> .
+		  ?dataset dcat:distribution ?distribution .
+		  ?distribution dcat:downloadURL ?file .
+		}
+	} 
+ }
