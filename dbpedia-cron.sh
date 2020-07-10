@@ -60,10 +60,11 @@ do
     read minute
 done
 
+dir=$(pwd)
 timestamp='$(date "+\%Y.\%m.\%d-\%H.\%M.\%S")'
 # Backslash used to escape % which is a new line in ts command (ts from moreutils: $ sudo apt-get install moreutils)
-mkdir -p log
-cronjob="$minute $hour $day $month $weekday update-script.sh | ts '[\%Y-\%m-\%d \%H:\%M:\%S]' >> log/"$timestamp"_esdbpedia-update.log 2>&1; echo $? | ts '[\%Y-\%m-\%d \%H:\%M:\%S]' >> log/"$timestamp"_code-error.log"
+mkdir -p logs
+cronjob="$minute $hour $day $month $weekday "$dir"/update-script.sh | ts '[\%Y-\%m-\%d \%H:\%M:\%S]' >> "$dir"/logs/"$timestamp"_esdbpedia-update.log 2>&1; echo $? | ts '[\%Y-\%m-\%d \%H:\%M:\%S]' >> "$dir"/logs/"$timestamp"_code-error.log"
 
 cronexists='echo Cron job for this file already exists!
 read -p "Do want to remove it (y/n)? " -n 1 -r

@@ -13,9 +13,10 @@ DATAPATH="vad"
 GRAPH="<http://es.dbpedia.org>"
 ACCOUNT="dba"
 PASSWORD="dba"
+DIR=$(dirname "$0")
 
 # post request to a sparql end point using content in txt file and write the result to a text file as list
-QUERY=$(<request.txt)
+QUERY=$(<"$DIR"/request.txt)
 
 # retrieve downloadurls with sparql query
 DOWNLOADURLS=`curl -X POST --data-urlencode query="$QUERY" --data-urlencode format="text/tab-separated-values"  "https://databus.dbpedia.org/repo/sparql"`
@@ -46,7 +47,7 @@ rm /usr/local/virtuoso/share/virtuoso/"$DATAPATH"/*.pdf
 
 # uncompress the bz2 files and delet them
 printf "Uncompressing .bz2 files..."
-ls /usr/local/virtuoso/share/virtuoso/"$DATAPATH"/*.bz2 | parallel bunzip2 & PID=$!
+ls /usr/local/virtuoso/share/virtuoso/"$DATAPATH"/*.bz2 | parallel bunzip2 & wait
 echo 'Done!'
 
 # rm /usr/local/virtuoso/var/lib/virtuoso/db/virtuoso.lck
