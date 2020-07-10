@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # TODO
-# Graphic interface
 # More variables
 # User friendly script
 
@@ -16,7 +15,7 @@ ACCOUNT="dba"
 PASSWORD="dba"
 
 # post request to a sparql end point using content in txt file and write the result to a text file as list
-QUERY=$(</home/zinner/Desktop/request.txt)
+QUERY=$(<request.txt)
 
 # retrieve downloadurls with sparql query
 DOWNLOADURLS=`curl -X POST --data-urlencode query="$QUERY" --data-urlencode format="text/tab-separated-values"  "https://databus.dbpedia.org/repo/sparql"`

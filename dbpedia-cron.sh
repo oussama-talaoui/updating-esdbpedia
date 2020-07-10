@@ -62,7 +62,7 @@ done
 
 timestamp='$(date "+\%Y.\%m.\%d-\%H.\%M.\%S")'
 # Backslash used to escape % which is a new line in ts command (ts from moreutils: $ sudo apt-get install moreutils)
-cronjob="$minute $hour $day $month $weekday /home/zinner/Desktop/update-script.sh | ts '[\%Y-\%m-\%d \%H:\%M:\%S]' >> /home/zinner/Desktop/"$timestamp"_esdbpedia-update.log 2>&1; echo $? | ts '[\%Y-\%m-\%d \%H:\%M:\%S]' >> /home/zinner/Desktop/"$timestamp"_code-error.log"
+cronjob="$minute $hour $day $month $weekday update-script.sh | ts '[\%Y-\%m-\%d \%H:\%M:\%S]' >> ../log/"$timestamp"_esdbpedia-update.log 2>&1; echo $? | ts '[\%Y-\%m-\%d \%H:\%M:\%S]' >> ../log/"$timestamp"_code-error.log"
 
 cronexists='echo Cron job for this file already exists!
 read -p "Do want to remove it (y/n)? " -n 1 -r
@@ -83,7 +83,7 @@ else
 fi
 '
 
-chmod +x /home/zinner/Desktop/update-script.sh
+chmod +x update-script.sh
 
 echo "Your cron job command is: $cronjob"
-crontab -l | grep -q '/home/zinner/Desktop/update-script.sh' && eval "$cronexists" || { echo "$cronjob"; } | crontab -
+crontab -l | grep -q 'update-script.sh' && eval "$cronexists" || { echo "$cronjob"; } | crontab -
