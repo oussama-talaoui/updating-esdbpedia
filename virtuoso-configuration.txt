@@ -4,9 +4,12 @@ sudo apt-get install git
 sudo apt-get install autoconf autogen
 sudo apt-get install libtool bison flex gawk gperf
 sudo apt-get install libssl1.0.0 libssl-dev
+sudo apt-get install libssl1.0-dev
 sudo apt-get install curl
 sudo apt-get install parallel
 sudo apt-get install moreutils
+
+sudo -i
 
 git clone git://github.com/openlink/virtuoso-opensource.git
 cd virtuoso-opensource
@@ -32,7 +35,7 @@ isql-v 1111 dba dba exec="vad_install('/usr/local/virtuoso/share/virtuoso/vad/rd
 isql-v 1111 dba dba exec="vad_install('/usr/local/virtuoso/share/virtuoso/vad/fct_dav.vad', 0);"
 
 isql-v
-SQL> registry_set ('dbp_decode_iri', 'on'); §\label{line:iri}§
+SQL> registry_set ('dbp_decode_iri', 'on');
 registry_set ('dbp_domain', 'http://es.dbpedia.org');
 registry_set ('dbp_graph', 'http://es.dbpedia.org');
 registry_set ('dbp_lang', 'es');
