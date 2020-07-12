@@ -16,11 +16,17 @@ SELECT DISTINCT ?file WHERE
 				?distribution <http://dataid.dbpedia.org/ns/core#formatExtension> 'ttl'^^<http://www.w3.org/2001/XMLSchema#string> . 
 			} 
 			{ 
-				?distribution <http://purl.org/dc/terms/hasVersion> '2019.08.30'^^<http://www.w3.org/2001/XMLSchema#string> . 
-			} 
-			{ 
 				?distribution <http://dataid.dbpedia.org/ns/cv#lang> 'es'^^<http://www.w3.org/2001/XMLSchema#string> . 
 			} 
+			{
+				?distribution dct:hasVersion ?latestVersion 
+				{
+					SELECT (?version as ?latestVersion) WHERE { 
+						?dataset dataid:artifact <https://databus.dbpedia.org/dbpedia/generic/categories> . 
+						?dataset dct:hasVersion ?version . 
+					} ORDER BY DESC (?version) LIMIT 1 
+				} 
+			}
 			?distribution dcat:downloadURL ?file .
 		}
 	}
@@ -37,11 +43,17 @@ SELECT DISTINCT ?file WHERE
 				?distribution <http://dataid.dbpedia.org/ns/core#formatExtension> 'ttl'^^<http://www.w3.org/2001/XMLSchema#string> . 
 			} 
 			{ 
-				?distribution <http://purl.org/dc/terms/hasVersion> '2019.08.30'^^<http://www.w3.org/2001/XMLSchema#string> . 
-			} 
-			{ 
 				?distribution <http://dataid.dbpedia.org/ns/cv#lang> 'es'^^<http://www.w3.org/2001/XMLSchema#string> . 
 			} 
+			{
+				?distribution dct:hasVersion ?latestVersion 
+				{
+					SELECT (?version as ?latestVersion) WHERE { 
+						?dataset dataid:artifact <https://databus.dbpedia.org/dbpedia/generic/commons-sameas-links> . 
+						?dataset dct:hasVersion ?version . 
+					} ORDER BY DESC (?version) LIMIT 1 
+				} 
+			}
 			?distribution dcat:downloadURL ?file .
 		}
 	}
@@ -58,10 +70,19 @@ SELECT DISTINCT ?file WHERE
 				?distribution <http://dataid.dbpedia.org/ns/core#formatExtension> 'ttl'^^<http://www.w3.org/2001/XMLSchema#string> . 
 			} 
 			{ 
-				?distribution <http://purl.org/dc/terms/hasVersion> '2019.08.30'^^<http://www.w3.org/2001/XMLSchema#string> . 
-			} 
-			{ 
 				?distribution <http://dataid.dbpedia.org/ns/cv#lang> 'es'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			{
+				?distribution dct:hasVersion ?latestVersion 
+				{
+					SELECT (?version as ?latestVersion) WHERE { 
+						?dataset dataid:artifact <https://databus.dbpedia.org/dbpedia/generic/disambiguations> . 
+						?dataset dct:hasVersion ?version . 
+					} ORDER BY DESC (?version) LIMIT 1 
+				} 
+			}
+			{ 
+				?distribution <http://dataid.dbpedia.org/ns/cv#tag> 'redirected'^^<http://www.w3.org/2001/XMLSchema#string> . 
 			} 
 			?distribution dcat:downloadURL ?file .
 		}
@@ -79,11 +100,17 @@ SELECT DISTINCT ?file WHERE
 				?distribution <http://dataid.dbpedia.org/ns/core#formatExtension> 'ttl'^^<http://www.w3.org/2001/XMLSchema#string> . 
 			} 
 			{ 
-				?distribution <http://purl.org/dc/terms/hasVersion> '2019.08.30'^^<http://www.w3.org/2001/XMLSchema#string> . 
-			} 
-			{ 
 				?distribution <http://dataid.dbpedia.org/ns/cv#lang> 'es'^^<http://www.w3.org/2001/XMLSchema#string> . 
 			} 
+			{
+				?distribution dct:hasVersion ?latestVersion 
+				{
+					SELECT (?version as ?latestVersion) WHERE { 
+						?dataset dataid:artifact <https://databus.dbpedia.org/dbpedia/generic/external-links> . 
+						?dataset dct:hasVersion ?version . 
+					} ORDER BY DESC (?version) LIMIT 1 
+				} 
+			}
 			?distribution dcat:downloadURL ?file .
 		}
 	}
@@ -100,11 +127,17 @@ SELECT DISTINCT ?file WHERE
 				?distribution <http://dataid.dbpedia.org/ns/core#formatExtension> 'ttl'^^<http://www.w3.org/2001/XMLSchema#string> . 
 			} 
 			{ 
-				?distribution <http://purl.org/dc/terms/hasVersion> '2019.08.30'^^<http://www.w3.org/2001/XMLSchema#string> . 
-			} 
-			{ 
 				?distribution <http://dataid.dbpedia.org/ns/cv#lang> 'es'^^<http://www.w3.org/2001/XMLSchema#string> . 
 			} 
+			{
+				?distribution dct:hasVersion ?latestVersion 
+				{
+					SELECT (?version as ?latestVersion) WHERE { 
+						?dataset dataid:artifact <https://databus.dbpedia.org/dbpedia/generic/geo-coordinates> . 
+						?dataset dct:hasVersion ?version . 
+					} ORDER BY DESC (?version) LIMIT 1 
+				} 
+			}
 			?distribution dcat:downloadURL ?file .
 		}
 	}
@@ -121,11 +154,17 @@ SELECT DISTINCT ?file WHERE
 				?distribution <http://dataid.dbpedia.org/ns/core#formatExtension> 'ttl'^^<http://www.w3.org/2001/XMLSchema#string> . 
 			} 
 			{ 
-				?distribution <http://purl.org/dc/terms/hasVersion> '2019.08.30'^^<http://www.w3.org/2001/XMLSchema#string> . 
-			} 
-			{ 
 				?distribution <http://dataid.dbpedia.org/ns/cv#lang> 'es'^^<http://www.w3.org/2001/XMLSchema#string> . 
 			} 
+			{
+				?distribution dct:hasVersion ?latestVersion 
+				{
+					SELECT (?version as ?latestVersion) WHERE { 
+						?dataset dataid:artifact <https://databus.dbpedia.org/dbpedia/generic/homepages> . 
+						?dataset dct:hasVersion ?version . 
+					} ORDER BY DESC (?version) LIMIT 1 
+				} 
+			}
 			?distribution dcat:downloadURL ?file .
 		}
 	}
@@ -142,11 +181,17 @@ SELECT DISTINCT ?file WHERE
 				?distribution <http://dataid.dbpedia.org/ns/core#formatExtension> 'ttl'^^<http://www.w3.org/2001/XMLSchema#string> . 
 			} 
 			{ 
-				?distribution <http://purl.org/dc/terms/hasVersion> '2019.08.30'^^<http://www.w3.org/2001/XMLSchema#string> . 
-			} 
-			{ 
 				?distribution <http://dataid.dbpedia.org/ns/cv#lang> 'es'^^<http://www.w3.org/2001/XMLSchema#string> . 
 			} 
+			{
+				?distribution dct:hasVersion ?latestVersion 
+				{
+					SELECT (?version as ?latestVersion) WHERE { 
+						?dataset dataid:artifact <https://databus.dbpedia.org/dbpedia/generic/infobox-properties> . 
+						?dataset dct:hasVersion ?version . 
+					} ORDER BY DESC (?version) LIMIT 1 
+				} 
+			}
 			?distribution dcat:downloadURL ?file .
 		}
 	}
@@ -163,11 +208,17 @@ SELECT DISTINCT ?file WHERE
 				?distribution <http://dataid.dbpedia.org/ns/core#formatExtension> 'ttl'^^<http://www.w3.org/2001/XMLSchema#string> . 
 			} 
 			{ 
-				?distribution <http://purl.org/dc/terms/hasVersion> '2019.08.30'^^<http://www.w3.org/2001/XMLSchema#string> . 
-			} 
-			{ 
 				?distribution <http://dataid.dbpedia.org/ns/cv#lang> 'es'^^<http://www.w3.org/2001/XMLSchema#string> . 
 			} 
+			{
+				?distribution dct:hasVersion ?latestVersion 
+				{
+					SELECT (?version as ?latestVersion) WHERE { 
+						?dataset dataid:artifact <https://databus.dbpedia.org/dbpedia/generic/infobox-property-definitions> . 
+						?dataset dct:hasVersion ?version . 
+					} ORDER BY DESC (?version) LIMIT 1 
+				} 
+			}
 			?distribution dcat:downloadURL ?file .
 		}
 	}
@@ -184,11 +235,17 @@ SELECT DISTINCT ?file WHERE
 				?distribution <http://dataid.dbpedia.org/ns/core#formatExtension> 'ttl'^^<http://www.w3.org/2001/XMLSchema#string> . 
 			} 
 			{ 
-				?distribution <http://purl.org/dc/terms/hasVersion> '2019.08.30'^^<http://www.w3.org/2001/XMLSchema#string> . 
-			} 
-			{ 
 				?distribution <http://dataid.dbpedia.org/ns/cv#lang> 'es'^^<http://www.w3.org/2001/XMLSchema#string> . 
 			} 
+			{
+				?distribution dct:hasVersion ?latestVersion 
+				{
+					SELECT (?version as ?latestVersion) WHERE { 
+						?dataset dataid:artifact <https://databus.dbpedia.org/dbpedia/generic/interlanguage-links> . 
+						?dataset dct:hasVersion ?version . 
+					} ORDER BY DESC (?version) LIMIT 1 
+				} 
+			}
 			?distribution dcat:downloadURL ?file .
 		}
 	}
@@ -205,11 +262,17 @@ SELECT DISTINCT ?file WHERE
 				?distribution <http://dataid.dbpedia.org/ns/core#formatExtension> 'ttl'^^<http://www.w3.org/2001/XMLSchema#string> . 
 			} 
 			{ 
-				?distribution <http://purl.org/dc/terms/hasVersion> '2019.08.30'^^<http://www.w3.org/2001/XMLSchema#string> . 
-			} 
-			{ 
 				?distribution <http://dataid.dbpedia.org/ns/cv#lang> 'es'^^<http://www.w3.org/2001/XMLSchema#string> . 
 			} 
+			{
+				?distribution dct:hasVersion ?latestVersion 
+				{
+					SELECT (?version as ?latestVersion) WHERE { 
+						?dataset dataid:artifact <https://databus.dbpedia.org/dbpedia/generic/labels> . 
+						?dataset dct:hasVersion ?version . 
+					} ORDER BY DESC (?version) LIMIT 1 
+				} 
+			}
 			?distribution dcat:downloadURL ?file .
 		}
 	}
@@ -226,11 +289,17 @@ SELECT DISTINCT ?file WHERE
 				?distribution <http://dataid.dbpedia.org/ns/core#formatExtension> 'ttl'^^<http://www.w3.org/2001/XMLSchema#string> . 
 			} 
 			{ 
-				?distribution <http://purl.org/dc/terms/hasVersion> '2019.08.30'^^<http://www.w3.org/2001/XMLSchema#string> . 
-			} 
-			{ 
 				?distribution <http://dataid.dbpedia.org/ns/cv#lang> 'es'^^<http://www.w3.org/2001/XMLSchema#string> . 
 			} 
+			{
+				?distribution dct:hasVersion ?latestVersion 
+				{
+					SELECT (?version as ?latestVersion) WHERE { 
+						?dataset dataid:artifact <https://databus.dbpedia.org/dbpedia/generic/page> . 
+						?dataset dct:hasVersion ?version . 
+					} ORDER BY DESC (?version) LIMIT 1 
+				} 
+			}
 			?distribution dcat:downloadURL ?file .
 		}
 	}
@@ -247,10 +316,19 @@ SELECT DISTINCT ?file WHERE
 				?distribution <http://dataid.dbpedia.org/ns/core#formatExtension> 'ttl'^^<http://www.w3.org/2001/XMLSchema#string> . 
 			} 
 			{ 
-				?distribution <http://purl.org/dc/terms/hasVersion> '2019.08.30'^^<http://www.w3.org/2001/XMLSchema#string> . 
-			} 
-			{ 
 				?distribution <http://dataid.dbpedia.org/ns/cv#lang> 'es'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			{
+				?distribution dct:hasVersion ?latestVersion 
+				{
+					SELECT (?version as ?latestVersion) WHERE { 
+						?dataset dataid:artifact <https://databus.dbpedia.org/dbpedia/generic/persondata> . 
+						?dataset dct:hasVersion ?version . 
+					} ORDER BY DESC (?version) LIMIT 1 
+				} 
+			}
+			{ 
+				?distribution <http://dataid.dbpedia.org/ns/cv#tag> 'redirected'^^<http://www.w3.org/2001/XMLSchema#string> . 
 			} 
 			?distribution dcat:downloadURL ?file .
 		}
@@ -268,11 +346,17 @@ SELECT DISTINCT ?file WHERE
 				?distribution <http://dataid.dbpedia.org/ns/core#formatExtension> 'ttl'^^<http://www.w3.org/2001/XMLSchema#string> . 
 			} 
 			{ 
-				?distribution <http://purl.org/dc/terms/hasVersion> '2019.08.30'^^<http://www.w3.org/2001/XMLSchema#string> . 
-			} 
-			{ 
 				?distribution <http://dataid.dbpedia.org/ns/cv#lang> 'es'^^<http://www.w3.org/2001/XMLSchema#string> . 
 			} 
+			{
+				?distribution dct:hasVersion ?latestVersion 
+				{
+					SELECT (?version as ?latestVersion) WHERE { 
+						?dataset dataid:artifact <https://databus.dbpedia.org/dbpedia/generic/redirects> . 
+						?dataset dct:hasVersion ?version . 
+					} ORDER BY DESC (?version) LIMIT 1 
+				} 
+			}
 			?distribution dcat:downloadURL ?file .
 		}
 	}
@@ -289,32 +373,17 @@ SELECT DISTINCT ?file WHERE
 				?distribution <http://dataid.dbpedia.org/ns/core#formatExtension> 'ttl'^^<http://www.w3.org/2001/XMLSchema#string> . 
 			} 
 			{ 
-				?distribution <http://purl.org/dc/terms/hasVersion> '2019.08.30'^^<http://www.w3.org/2001/XMLSchema#string> . 
-			} 
-			{ 
 				?distribution <http://dataid.dbpedia.org/ns/cv#lang> 'es'^^<http://www.w3.org/2001/XMLSchema#string> . 
 			} 
-			?distribution dcat:downloadURL ?file .
-		}
-	}
-	UNION
-	{
-		# Get all files
-		SELECT DISTINCT ?file WHERE {
-		 	?dataset dataid:artifact <https://databus.dbpedia.org/dbpedia/generic/wikilinks> .
-			?dataset dcat:distribution ?distribution .
-			{ 
-				?distribution <http://dataid.dbpedia.org/ns/core#compression> 'bzip2'^^<http://www.w3.org/2001/XMLSchema#string> . 
-			} 
-			{ 
-				?distribution <http://dataid.dbpedia.org/ns/core#formatExtension> 'ttl'^^<http://www.w3.org/2001/XMLSchema#string> . 
-			} 
-			{ 
-				?distribution <http://purl.org/dc/terms/hasVersion> '2019.08.30'^^<http://www.w3.org/2001/XMLSchema#string> . 
-			} 
-			{ 
-				?distribution <http://dataid.dbpedia.org/ns/cv#lang> 'es'^^<http://www.w3.org/2001/XMLSchema#string> . 
-			} 
+			{
+				?distribution dct:hasVersion ?latestVersion 
+				{
+					SELECT (?version as ?latestVersion) WHERE { 
+						?dataset dataid:artifact <https://databus.dbpedia.org/dbpedia/generic/revisions> . 
+						?dataset dct:hasVersion ?version . 
+					} ORDER BY DESC (?version) LIMIT 1 
+				} 
+			}
 			?distribution dcat:downloadURL ?file .
 		}
 	}
@@ -331,11 +400,17 @@ SELECT DISTINCT ?file WHERE
 				?distribution <http://dataid.dbpedia.org/ns/core#formatExtension> 'ttl'^^<http://www.w3.org/2001/XMLSchema#string> . 
 			} 
 			{ 
-				?distribution <http://purl.org/dc/terms/hasVersion> '2019.08.30'^^<http://www.w3.org/2001/XMLSchema#string> . 
-			} 
-			{ 
 				?distribution <http://dataid.dbpedia.org/ns/cv#lang> 'es'^^<http://www.w3.org/2001/XMLSchema#string> . 
 			} 
+			{
+				?distribution dct:hasVersion ?latestVersion 
+				{
+					SELECT (?version as ?latestVersion) WHERE { 
+						?dataset dataid:artifact <https://databus.dbpedia.org/dbpedia/generic/wikipedia-links> . 
+						?dataset dct:hasVersion ?version . 
+					} ORDER BY DESC (?version) LIMIT 1 
+				} 
+			}
 			?distribution dcat:downloadURL ?file .
 		}
 	}
@@ -346,17 +421,20 @@ SELECT DISTINCT ?file WHERE
 		 	?dataset dataid:artifact <https://databus.dbpedia.org/dbpedia/mappings/geo-coordinates-mappingbased> .
 			?dataset dcat:distribution ?distribution .
 			{ 
-				?distribution <http://purl.org/dc/terms/hasVersion> '2019.08.30'^^<http://www.w3.org/2001/XMLSchema#string> . 
-			} 
-			{ 
 				?distribution <http://dataid.dbpedia.org/ns/core#compression> 'bzip2'^^<http://www.w3.org/2001/XMLSchema#string> . 
 			} 
 			{ 
 				?distribution <http://dataid.dbpedia.org/ns/cv#lang> 'es'^^<http://www.w3.org/2001/XMLSchema#string> . 
 			} 
-			{ 
-				?distribution <http://dataid.dbpedia.org/ns/core#formatExtension> 'txt'^^<http://www.w3.org/2001/XMLSchema#string> . 
-			} 
+			{
+				?distribution dct:hasVersion ?latestVersion 
+				{
+					SELECT (?version as ?latestVersion) WHERE { 
+						?dataset dataid:artifact <https://databus.dbpedia.org/dbpedia/mappings/geo-coordinates-mappingbased> . 
+						?dataset dct:hasVersion ?version . 
+					} ORDER BY DESC (?version) LIMIT 1 
+				} 
+			}
 			?distribution dcat:downloadURL ?file .
 		}
 	}
@@ -367,14 +445,20 @@ SELECT DISTINCT ?file WHERE
 		 	?dataset dataid:artifact <https://databus.dbpedia.org/dbpedia/mappings/instance-types> .
 			?dataset dcat:distribution ?distribution .
 			{ 
-				?distribution <http://purl.org/dc/terms/hasVersion> '2019.08.30'^^<http://www.w3.org/2001/XMLSchema#string> . 
-			} 
-			{ 
 				?distribution <http://dataid.dbpedia.org/ns/core#compression> 'bzip2'^^<http://www.w3.org/2001/XMLSchema#string> . 
 			} 
 			{ 
 				?distribution <http://dataid.dbpedia.org/ns/cv#lang> 'es'^^<http://www.w3.org/2001/XMLSchema#string> . 
 			} 
+			{
+				?distribution dct:hasVersion ?latestVersion 
+				{
+					SELECT (?version as ?latestVersion) WHERE { 
+						?dataset dataid:artifact <https://databus.dbpedia.org/dbpedia/mappings/instance-types> . 
+						?dataset dct:hasVersion ?version . 
+					} ORDER BY DESC (?version) LIMIT 1 
+				} 
+			}
 			?distribution dcat:downloadURL ?file .
 		}
 	}
@@ -385,14 +469,20 @@ SELECT DISTINCT ?file WHERE
 		 	?dataset dataid:artifact <https://databus.dbpedia.org/dbpedia/mappings/mappingbased-literals> .
 			?dataset dcat:distribution ?distribution .
 			{ 
-				?distribution <http://purl.org/dc/terms/hasVersion> '2019.08.30'^^<http://www.w3.org/2001/XMLSchema#string> . 
-			} 
-			{ 
 				?distribution <http://dataid.dbpedia.org/ns/core#compression> 'bzip2'^^<http://www.w3.org/2001/XMLSchema#string> . 
 			} 
 			{ 
 				?distribution <http://dataid.dbpedia.org/ns/cv#lang> 'es'^^<http://www.w3.org/2001/XMLSchema#string> . 
 			} 
+			{
+				?distribution dct:hasVersion ?latestVersion 
+				{
+					SELECT (?version as ?latestVersion) WHERE { 
+						?dataset dataid:artifact <https://databus.dbpedia.org/dbpedia/mappings/mappingbased-literals> . 
+						?dataset dct:hasVersion ?version . 
+					} ORDER BY DESC (?version) LIMIT 1 
+				} 
+			}
 			?distribution dcat:downloadURL ?file .
 		}
 	}
@@ -403,14 +493,20 @@ SELECT DISTINCT ?file WHERE
 		 	?dataset dataid:artifact <https://databus.dbpedia.org/dbpedia/mappings/mappingbased-objects> .
 			?dataset dcat:distribution ?distribution .
 			{ 
-				?distribution <http://purl.org/dc/terms/hasVersion> '2019.08.30'^^<http://www.w3.org/2001/XMLSchema#string> . 
-			} 
-			{ 
 				?distribution <http://dataid.dbpedia.org/ns/core#compression> 'bzip2'^^<http://www.w3.org/2001/XMLSchema#string> . 
 			} 
 			{ 
 				?distribution <http://dataid.dbpedia.org/ns/cv#lang> 'es'^^<http://www.w3.org/2001/XMLSchema#string> . 
 			} 
+			{
+				?distribution dct:hasVersion ?latestVersion 
+				{
+					SELECT (?version as ?latestVersion) WHERE { 
+						?dataset dataid:artifact <https://databus.dbpedia.org/dbpedia/mappings/mappingbased-objects> . 
+						?dataset dct:hasVersion ?version . 
+					} ORDER BY DESC (?version) LIMIT 1 
+				} 
+			}
 			?distribution dcat:downloadURL ?file .
 		}
 	}
@@ -421,14 +517,20 @@ SELECT DISTINCT ?file WHERE
 		 	?dataset dataid:artifact <https://databus.dbpedia.org/dbpedia/mappings/specific-mappingbased-properties> .
 			?dataset dcat:distribution ?distribution .
 			{ 
-				?distribution <http://purl.org/dc/terms/hasVersion> '2019.08.30'^^<http://www.w3.org/2001/XMLSchema#string> . 
-			} 
-			{ 
 				?distribution <http://dataid.dbpedia.org/ns/core#compression> 'bzip2'^^<http://www.w3.org/2001/XMLSchema#string> . 
 			} 
 			{ 
 				?distribution <http://dataid.dbpedia.org/ns/cv#lang> 'es'^^<http://www.w3.org/2001/XMLSchema#string> . 
 			} 
+			{
+				?distribution dct:hasVersion ?latestVersion 
+				{
+					SELECT (?version as ?latestVersion) WHERE { 
+						?dataset dataid:artifact <https://databus.dbpedia.org/dbpedia/mappings/specific-mappingbased-properties> . 
+						?dataset dct:hasVersion ?version . 
+					} ORDER BY DESC (?version) LIMIT 1 
+				} 
+			}
 			?distribution dcat:downloadURL ?file .
 		}
 	}
@@ -439,11 +541,17 @@ SELECT DISTINCT ?file WHERE
 		 	?dataset dataid:artifact <https://databus.dbpedia.org/dbpedia/transition/freebase-links> .
 			?dataset dcat:distribution ?distribution .
 			{ 
-				?distribution <http://purl.org/dc/terms/hasVersion> '2019.02.10'^^<http://www.w3.org/2001/XMLSchema#string> . 
-			} 
-			{ 
 				?distribution <http://dataid.dbpedia.org/ns/cv#lang> 'es'^^<http://www.w3.org/2001/XMLSchema#string> . 
 			} 
+			{
+				?distribution dct:hasVersion ?latestVersion 
+				{
+					SELECT (?version as ?latestVersion) WHERE { 
+						?dataset dataid:artifact <https://databus.dbpedia.org/dbpedia/transition/freebase-links> . 
+						?dataset dct:hasVersion ?version . 
+					} ORDER BY DESC (?version) LIMIT 1 
+				} 
+			}
 			?distribution dcat:downloadURL ?file .
 		}
 	}
@@ -454,7 +562,87 @@ SELECT DISTINCT ?file WHERE
 		 	?dataset dataid:artifact <https://databus.dbpedia.org/dbpedia/transition/links> .
 			?dataset dcat:distribution ?distribution .
 			{ 
+				?distribution <http://dataid.dbpedia.org/ns/cv#lang> 'es'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			{
+				?distribution dct:hasVersion ?latestVersion 
+				{
+					SELECT (?version as ?latestVersion) WHERE { 
+						?dataset dataid:artifact <https://databus.dbpedia.org/dbpedia/transition/links> . 
+						?dataset dct:hasVersion ?version . 
+					} ORDER BY DESC (?version) LIMIT 1 
+				} 
+			}
+			UNION
+			{ 
 				?distribution <http://purl.org/dc/terms/hasVersion> '2019.02.01'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			?distribution dcat:downloadURL ?file .
+		}
+	}
+	UNION
+	{
+		# Get all files
+		SELECT DISTINCT ?file WHERE {
+		 	?dataset dataid:artifact <https://databus.dbpedia.org/dbpedia/text/short-abstracts> .
+			?dataset dcat:distribution ?distribution .
+			{ 
+				?distribution <http://dataid.dbpedia.org/ns/cv#lang> 'es'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			{
+				?distribution dct:hasVersion ?latestVersion 
+				{
+					SELECT (?version as ?latestVersion) WHERE { 
+						?dataset dataid:artifact <https://databus.dbpedia.org/dbpedia/text/short-abstracts> . 
+						?dataset dct:hasVersion ?version . 
+					} ORDER BY DESC (?version) LIMIT 1 
+				} 
+			}
+			?distribution dcat:downloadURL ?file .
+		}
+	}
+	UNION
+	{
+		# Get all files
+		SELECT DISTINCT ?file WHERE {
+		 	?dataset dataid:artifact <https://databus.dbpedia.org/dbpedia/text/long-abstracts> .
+			?dataset dcat:distribution ?distribution .
+			{ 
+				?distribution <http://dataid.dbpedia.org/ns/cv#lang> 'es'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			{
+				?distribution dct:hasVersion ?latestVersion 
+				{
+					SELECT (?version as ?latestVersion) WHERE { 
+						?dataset dataid:artifact <https://databus.dbpedia.org/dbpedia/text/long-abstracts> . 
+						?dataset dct:hasVersion ?version . 
+					} ORDER BY DESC (?version) LIMIT 1 
+				} 
+			}
+			?distribution dcat:downloadURL ?file .
+		}
+	}
+	UNION
+	{
+		# Get all files
+		SELECT DISTINCT ?file WHERE {
+		 	?dataset dataid:artifact <https://databus.dbpedia.org/propan/lhd/linked-hypernyms> .
+			?dataset dcat:distribution ?distribution .
+			{
+				?distribution dct:hasVersion ?latestVersion 
+				{
+					SELECT (?version as ?latestVersion) WHERE { 
+						?dataset dataid:artifact <https://databus.dbpedia.org/propan/lhd/linked-hypernyms> . 
+						?dataset dct:hasVersion ?version . 
+					} ORDER BY DESC (?version) LIMIT 1 
+				} 
+			}
+			{ 
+				?distribution <http://dataid.dbpedia.org/ns/cv#type> 'core'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			UNION
+			{ 
+				?distribution <http://dataid.dbpedia.org/ns/cv#type> 'extension'^^<http://www.w3.org/2001/XMLSchema#string> . 
 			} 
 			{ 
 				?distribution <http://dataid.dbpedia.org/ns/cv#lang> 'es'^^<http://www.w3.org/2001/XMLSchema#string> . 
@@ -466,9 +654,102 @@ SELECT DISTINCT ?file WHERE
 	{
 		# Get all files
 		SELECT DISTINCT ?file WHERE {
-		  ?dataset dataid:artifact <https://databus.dbpedia.org/dbpedia/publication/strategy> .
-		  ?dataset dcat:distribution ?distribution .
-		  ?distribution dcat:downloadURL ?file .
+		 	?dataset dataid:artifact <https://databus.dbpedia.org/denis/ontology/dbo-snapshots> .
+			?dataset dcat:distribution ?distribution .
+			{
+				?distribution dct:hasVersion ?latestVersion 
+				{
+					SELECT (?version as ?latestVersion) WHERE { 
+						?dataset dataid:artifact <https://databus.dbpedia.org/denis/ontology/dbo-snapshots> . 
+						?dataset dct:hasVersion ?version . 
+					} ORDER BY DESC (?version) LIMIT 1 
+				} 
+			}
+			{ 
+				?distribution <http://dataid.dbpedia.org/ns/core#formatExtension> 'nt'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			} 
+			?distribution dcat:downloadURL ?file .
+		}
+	}
+	UNION
+	{
+		# Get all files
+		SELECT DISTINCT ?file WHERE {
+		 	?dataset dataid:artifact <https://databus.dbpedia.org/vehnem/replaced-iris/long-abstracts> .
+			?dataset dcat:distribution ?distribution .
+			{
+				?distribution dct:hasVersion ?latestVersion 
+				{
+					SELECT (?version as ?latestVersion) WHERE { 
+						?dataset dataid:artifact <https://databus.dbpedia.org/vehnem/replaced-iris/long-abstracts> . 
+						?dataset dct:hasVersion ?version . 
+					} ORDER BY DESC (?version) LIMIT 1 
+				} 
+			}
+			{
+				?distribution <http://dataid.dbpedia.org/ns/cv#lang> 'es'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			}
+			?distribution dcat:downloadURL ?file .
+		}
+	}
+	UNION
+	{
+		# Get all files
+		SELECT DISTINCT ?file WHERE {
+		 	?dataset dataid:artifact <https://databus.dbpedia.org/vehnem/replaced-iris/sameAs> .
+			?dataset dcat:distribution ?distribution .
+			{
+				?distribution dct:hasVersion ?latestVersion 
+				{
+					SELECT (?version as ?latestVersion) WHERE { 
+						?dataset dataid:artifact <https://databus.dbpedia.org/vehnem/replaced-iris/sameAs> . 
+						?dataset dct:hasVersion ?version . 
+					} ORDER BY DESC (?version) LIMIT 1 
+				} 
+			}
+			?distribution dcat:downloadURL ?file .
+		}
+	}
+	UNION
+	{
+		# Get all files
+		SELECT DISTINCT ?file WHERE {
+		 	?dataset dataid:artifact <https://databus.dbpedia.org/vehnem/replaced-iris/labels> .
+			?dataset dcat:distribution ?distribution .
+			{
+				?distribution dct:hasVersion ?latestVersion 
+				{
+					SELECT (?version as ?latestVersion) WHERE { 
+						?dataset dataid:artifact <https://databus.dbpedia.org/vehnem/replaced-iris/labels> . 
+						?dataset dct:hasVersion ?version . 
+					} ORDER BY DESC (?version) LIMIT 1 
+				} 
+			}
+			{
+				?distribution <http://dataid.dbpedia.org/ns/cv#lang> 'es'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			}
+			?distribution dcat:downloadURL ?file .
+		}
+	}
+	UNION
+	{
+		# Get all files
+		SELECT DISTINCT ?file WHERE {
+		 	?dataset dataid:artifact <https://databus.dbpedia.org/vehnem/replaced-iris/short-abstracts> .
+			?dataset dcat:distribution ?distribution .
+			{
+				?distribution dct:hasVersion ?latestVersion 
+				{
+					SELECT (?version as ?latestVersion) WHERE { 
+						?dataset dataid:artifact <https://databus.dbpedia.org/vehnem/replaced-iris/short-abstracts> . 
+						?dataset dct:hasVersion ?version . 
+					} ORDER BY DESC (?version) LIMIT 1 
+				} 
+			}
+			{ 
+				?distribution <http://dataid.dbpedia.org/ns/cv#lang> 'es'^^<http://www.w3.org/2001/XMLSchema#string> . 
+			}
+			?distribution dcat:downloadURL ?file .
 		}
 	} 
  }
