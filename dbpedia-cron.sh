@@ -36,8 +36,8 @@ do
     read day
 done
 
-read -p "Enter hour of the day (0 to 24, empty or * for every hour): " hour
-while [[ ! $hour =~ ^[0-9]+$ || ! $hour -ge 0 || ! $hour -le 24 ]]
+read -p "Enter hour of the day (0 to 23, empty or * for every hour): " hour
+while [[ ! $hour =~ ^[0-9]+$ || ! $hour -ge 0 || ! $hour -le 23 ]]
 do
     if [[ $hour == '' || $hour == '*' ]]
 	then
