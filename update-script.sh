@@ -53,15 +53,15 @@ echo 'Done!'
 rm -f /usr/local/virtuoso/var/lib/virtuoso/db/virtuoso.lck
 
 # runing the virtuoso server if it's down and waiting for it to run before continuing
-if netstat -tulpn | grep :8890
+if netstat -tulpn | grep virtuoso-t
 then
     echo "server runing"
 else
     echo "running the server..."
-    sudo virtuoso-t -f -c /usr/local/virtuoso/var/lib/virtuoso/db/virtuoso.ini
-    while ! netstat -tulpn | grep :8890
+    virtuoso-t -f -c /usr/local/virtuoso/var/lib/virtuoso/db/virtuoso.ini &
+    while ! netstat -tulpn | grep virtuoso-t
     do
-	wait
+	wait 5
     done
     echo "server runing"
 fi
