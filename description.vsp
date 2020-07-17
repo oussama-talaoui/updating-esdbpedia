@@ -259,9 +259,9 @@
 		<span class="icon-bar"></span>
 	    </button>
 	    <a class="navbar-brand" href="<?=registry_get('dbp_imprint') ?>" title="About DBpedia" style="color: #2c5078">
-	    <img class="img-responsive" src="https://i.imgur.com/IeeSN7U.png" alt="About DBpedia" style="display: inline-block;  margin-top: -15px;width:70px;height:49px;"/>
+	    <img class="img-responsive" src="https://i.imgur.com/IeeSN7U.png" alt="About DBpedia" style="display: inline-block; margin-top: -15px;width:70px;height:49px;"/>
 	    </a>
-        <a class="navbar-brand" href="https://www.upm.es/" title="About UPM" style="color: #2c5078">
+      <a class="navbar-brand" href="https://www.upm.es/" title="About UPM" style="color: #2c5078">
 	    <img class="img-responsive" src="https://www.upm.es/sfs/Rectorado/Gabinete%20del%20Rector/Logos/UPM/Logotipo%20con%20Leyenda/LOGOTIPO%20leyenda%20color%20PNG.png" alt="About UPM" style="display: inline-block;  margin-top: -20px;width:120px;height:56px;">
 	    </a>
 	</div>
