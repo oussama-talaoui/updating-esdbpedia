@@ -73,8 +73,8 @@ echo "http://es.dbpedia.org" > /usr/local/virtuoso/share/virtuoso/vad/global.gra
 # Large graphs can be cleared by changing the transaction log mode to autocommit on each operation, deleting the graph(s) or triples. This is easily done using the Virtuoso log_enable function, with the settings log_enable(3,1).
 
 isql-v 1111 dba dba exec="log_enable(3,1);"
-isql-v 1111 dba dba exec="DELETE FROM rdf_quad WHERE g = iri_to_id ('http://es.dbpedia.org');"
-# isql-v 1111 dba dba exec="SPARQL CLEAR GRAPH <http://es.dbpedia.org>;"
+isql-v 1111 dba dba exec="DELETE FROM RDF_QUAD WHERE G = DB.DBA.RDF_MAKE_IID_OF_QNAME ('http://es.dbpedia.org');"
+# isql-v 1111 dba dba exec="DELETE FROM rdf_quad WHERE g = iri_to_id ('http://es.dbpedia.org');"
 isql-v 1111 dba dba exec="DELETE FROM DB.DBA.load_list;"
 isql-v 1111 dba dba exec="ld_dir ('/usr/local/virtuoso/share/virtuoso/vad', '*.*', 'http://es.dbpedia.org');"
 
