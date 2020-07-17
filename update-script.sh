@@ -27,7 +27,7 @@ echo $DOWNLOADURLS
 
 # remove previous data files
 echo -n 'Deleting files... '
-rm /usr/local/virtuoso/share/virtuoso/"$DATAPATH"/* & PID=$!
+rm -f /usr/local/virtuoso/share/virtuoso/"$DATAPATH"/* & PID=$!
 echo 'Done!'
 
 # download files and append timestamp
@@ -42,15 +42,15 @@ wait
 
 # remove uneeded files
 echo "Removing uneeded files."
-rm /usr/local/virtuoso/share/virtuoso/"$DATAPATH"/*.file
-rm /usr/local/virtuoso/share/virtuoso/"$DATAPATH"/*.pdf
+rm -f /usr/local/virtuoso/share/virtuoso/"$DATAPATH"/*.file
+rm -f /usr/local/virtuoso/share/virtuoso/"$DATAPATH"/*.pdf
 
 # uncompress the bz2 files and delet them
 printf "Uncompressing .bz2 files..."
 ls /usr/local/virtuoso/share/virtuoso/"$DATAPATH"/*.bz2 | parallel bunzip2 & wait
 echo 'Done!'
 
-rm /usr/local/virtuoso/var/lib/virtuoso/db/virtuoso.lck
+rm -f /usr/local/virtuoso/var/lib/virtuoso/db/virtuoso.lck
 
 # runing the virtuoso server if it's down and waiting for it to run before continuing
 if netstat -tulpn | grep :8890
@@ -73,8 +73,8 @@ echo "http://es.dbpedia.org" > /usr/local/virtuoso/share/virtuoso/vad/global.gra
 # Large graphs can be cleared by changing the transaction log mode to autocommit on each operation, deleting the graph(s) or triples. This is easily done using the Virtuoso log_enable function, with the settings log_enable(3,1).
 
 isql-v 1111 dba dba exec="log_enable(3,1);"
-# isql-v 1111 dba dba exec="DELETE FROM rdf_quad WHERE g = iri_to_id ('http://es.dbpedia.org');"
-isql-v 1111 dba dba exec="SPARQL CLEAR GRAPH <http://es.dbpedia.org>;"
+isql-v 1111 dba dba exec="DELETE FROM rdf_quad WHERE g = iri_to_id ('http://es.dbpedia.org');"
+# isql-v 1111 dba dba exec="SPARQL CLEAR GRAPH <http://es.dbpedia.org>;"
 isql-v 1111 dba dba exec="DELETE FROM DB.DBA.load_list;"
 isql-v 1111 dba dba exec="ld_dir ('/usr/local/virtuoso/share/virtuoso/vad', '*.*', 'http://es.dbpedia.org');"
 
