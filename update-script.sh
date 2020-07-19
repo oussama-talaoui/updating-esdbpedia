@@ -40,8 +40,8 @@ for url in $DOWNLOADURLS; do
 done
 wait
 
-# remove uneeded files
-echo "Removing uneeded files."
+# remove unneeded files
+echo "Removing unneeded files."
 rm -f /usr/local/virtuoso/share/virtuoso/"$DATAPATH"/*.file
 rm -f /usr/local/virtuoso/share/virtuoso/"$DATAPATH"/*.pdf
 
@@ -80,7 +80,7 @@ isql-v 1111 dba dba exec="ld_dir ('/usr/local/virtuoso/share/virtuoso/vad', '*.*
 
 # Getting number of cores in the machine and running multiple Loaders using no cores / 2.5, to optimally parallelize the data load.
 noperation=`echo $(nproc) / 2.5 | bc`
-echo $noperation
+echo $noperation " multipe loader:"
 echo "Running multiple Loaders:"
 for (( c=1; c<=$noperation; c++ ))
 do

@@ -8,7 +8,7 @@ do
 		month='*'
 	break
     fi
-    printf 'Please enter a valide month number: '
+    printf 'Please enter a valid month number: '
     read month
 done
 
@@ -20,7 +20,7 @@ do
 		weekday='*'
 	break
     fi
-    printf 'Please enter a valide weekday: '
+    printf 'Please enter a valid weekday: '
     read weekday
 done
 
@@ -32,7 +32,7 @@ do
 		day='*'   
 	break
     fi
-    printf 'Please enter a valide day: '
+    printf 'Please enter a valid day: '
     read day
 done
 
@@ -44,7 +44,7 @@ do
 		hour='*'
 	break
     fi
-    printf 'Please enter a valide hour: '
+    printf 'Please enter a valid hour: '
     read hour
 done
 
@@ -56,7 +56,7 @@ do
 		minute='*'
 	break
     fi
-    printf 'Please enter a valide minute: '
+    printf 'Please enter a valid minute: '
     read minute
 done
 
