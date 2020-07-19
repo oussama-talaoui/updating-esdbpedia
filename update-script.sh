@@ -45,17 +45,17 @@ echo "Removing unneeded files."
 rm -f /usr/local/virtuoso/share/virtuoso/"$DATAPATH"/*.file
 rm -f /usr/local/virtuoso/share/virtuoso/"$DATAPATH"/*.pdf
 
-# uncompress the bz2 files and delet them
+# uncompress the bz2 files and delete them
 printf "Uncompressing .bz2 files..."
 ls /usr/local/virtuoso/share/virtuoso/"$DATAPATH"/*.bz2 | parallel bunzip2 & wait
 echo 'Done!'
 
 rm -f /usr/local/virtuoso/var/lib/virtuoso/db/virtuoso.lck
 
-# runing the virtuoso server if it's down and waiting for it to run before continuing
+# running the virtuoso server if it's down and waiting for it to run before continuing
 if netstat -tulpn | grep virtuoso-t
 then
-    echo "server runing"
+    echo "server running"
 else
     echo "running the server..."
     virtuoso-t -f -c /usr/local/virtuoso/var/lib/virtuoso/db/virtuoso.ini &
@@ -63,7 +63,7 @@ else
     do
 	wait 5
     done
-    echo "server runing"
+    echo "server running"
 fi
 
 # Create graph name file
@@ -96,4 +96,4 @@ isql-v 1111 dba dba exec="SPARQL SELECT *  FROM <http://es.dbpedia.org> WHERE   
 
 end=`date +%s`
 runtime=$((end-start))
-echo Runing the script took $(($runtime / 60)) minutes.
+echo Running the script took $(($runtime / 60)) minutes.
